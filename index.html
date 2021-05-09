@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name picker</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body class="boy">
+    <!-- INTRO -->
+    <div class="intro">
+      <div class="intro-box">
+        <h1 class="welcome">Welcome to a name picker</h1>
+        <p>1. Choose number of options between 2 and 6, press apply</p>
+        <p>2. Choose whether that's a girl or a boy.</p>
+        <p>3. Then shuffle to see what name has been picked!</p>
+        <p>
+          4. You can change number of options and shuffle as many times as you
+          want.
+        </p>
+        <button class="button btn-play">Let's play</button>
+      </div>
+    </div>
+    <div class="app hide">
+      <div class="box-0">
+        <!-- CHANGES COLOUR OF PAGE DEPENDING ON SEX -->
+        <span>Number of options</span>
+        <input
+          type="number"
+          onchange="val()"
+          class="noOptionsEl"
+          min="2"
+          max="6"
+        />
+        <button class="button btn-apply">Apply</button>
+      </div>
+      <br />
+      <div class="box-1">
+        <h1>
+          Name picker for a lovely
+          <button class="btn btn-boy">boy</button
+          ><button class="btn btn-girl">girl</button>
+        </h1>
+      </div>
+
+      <!-- NAMES SECTION -->
+      <div class="box-2">
+        <p>Type in names</p>
+
+        <input type="text" class="name hidden" id="name1" placeholder="1" />
+        <input type="text" class="name hidden" id="name2" placeholder="2" />
+        <input type="text" class="name hidden" id="name3" placeholder="3" />
+        <input type="text" class="name hidden" id="name4" placeholder="4" />
+        <input type="text" class="name hidden" id="name5" placeholder="5" />
+        <input type="text" class="name hidden" id="name6" placeholder="6" />
+
+        <button class="btn btn-shuffle">Shuffle</button>
+
+        <p>Congratulations, the name for your baby is:</p>
+        <div id="name-final"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
